@@ -1,1 +1,1 @@
-# es6-basic
+# ES6-basic
