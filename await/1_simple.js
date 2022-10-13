@@ -39,9 +39,15 @@ const fallo = (status) => {
     console.log(status)
 }
 
-//Invocar la función
-get_data(url).then((data)=>{
-    exito(data)
-}).catch((status)=>{
-    fallo(status)
-})
+//Invocar la función de modo
+//async await
+
+const f = async function(){
+    try{
+        let response = await get_data(url)
+        exito(response)
+    }catch(error){
+        fallo(error)
+    }
+}
+f()
